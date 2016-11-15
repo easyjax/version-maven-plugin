@@ -32,10 +32,10 @@ The `version:update` goal is bound to the `validate` phase, and is used to analy
 
 #### Configuration Parameters
 
-| Name                  | Type    | Use      | Description                                                              |
-|:----------------------|:--------|:---------|:-------------------------------------------------------------------------|
-| /`incrementPart    `  | String  | Optional | Part of version to increment: [MAJOR|MINOR|PATCH]. **Default:** `PATCH`. |
-| /`incrementSnapshot`  | Boolean | Optional | Increment version of `-SNAPSHOT` artifacts. **Default:** `false`.        |
+| Name                  | Type    | Use      | Description                                                                |
+|:----------------------|:--------|:---------|:---------------------------------------------------------------------------|
+| /`incrementPart    `  | String  | Optional | Part of version to increment: `[MAJOR|MINOR|PATCH]`. **Default:** `PATCH`. |
+| /`incrementSnapshot`  | Boolean | Optional | Increment version of `-SNAPSHOT` artifacts. **Default:** `false`.          |
 
 ## Known Issues
 
