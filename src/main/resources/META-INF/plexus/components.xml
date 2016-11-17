@@ -1,0 +1,19 @@
+<component-set xmlns="http://plexus.codehaus.org/xsd/components">
+  <components>
+    <component>
+      <role>org.apache.maven.lifecycle.Lifecycle</role>
+      <role-hint>version</role-hint>
+      <implementation>org.apache.maven.lifecycle.Lifecycle</implementation>
+      <configuration>
+        <id>version</id>
+        <phases>
+          <phase>version</phase>
+        </phases>
+        <default-phases>
+          <version>org.safris.maven.plugin:version-maven-plugin:update</version>
+          <validate>org.safris.maven.plugin:version-maven-plugin:update</validate>
+        </default-phases>
+      </configuration>
+    </component>
+  </components>
+</component-set>
