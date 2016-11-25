@@ -59,7 +59,7 @@
   <dependencies>
     <dependency>
       <groupId>org.safris.commons</groupId>
-      <artifactId>io</artifactId>
+      <artifactId>commons-io</artifactId>
       <version>1.3.3</version>
     </dependency>
     <dependency>
