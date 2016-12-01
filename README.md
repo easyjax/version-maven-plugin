@@ -1,5 +1,5 @@
 <img src="http://safris.org/logo.png" align="right"/>
-## version-maven-plugin<br>[![JavaCommons](https://img.shields.io/badge/mvn-plugin-lightgrey.svg)](https://cohesionfirst.com/) [![CohesionFirst](https://img.shields.io/badge/CohesionFirst%E2%84%A2--blue.svg)](https://cohesionfirst.com/)
+## version-maven-plugin<br>![mvn-plugin][mvn-plugin] [![CohesionFirst™][cohesionfirst_badge]][cohesionfirst]
 > Maven Plugin for POM version management goals
 
 ### Introduction
@@ -32,10 +32,10 @@ The `version:update` goal is bound to the `validate` phase, and is used to analy
 
 ##### Configuration Parameters
 
-| Name                  | Type    | Use      | Description                                                                |
-|:----------------------|:--------|:---------|:---------------------------------------------------------------------------|
-| `/incrementPart`      | String  | Optional | Part of version to increment: `[MAJOR|MINOR|PATCH]`. **Default:** `PATCH`. |
-| `/incrementSnapshot`  | Boolean | Optional | Increment version of `-SNAPSHOT` artifacts. **Default:** `false`.          |
+| Name                 | Type    | Use      | Description                                                                |
+|:---------------------|:--------|:---------|:---------------------------------------------------------------------------|
+| `/incrementPart`     | String  | Optional | Part of version to increment: `[MAJOR|MINOR|PATCH]`. **Default:** `PATCH`. |
+| `/incrementSnapshot` | Boolean | Optional | Increment version of `-SNAPSHOT` artifacts. **Default:** `false`.          |
 
 ### Known Issues
 
@@ -44,3 +44,7 @@ The `version:update` goal is bound to the `validate` phase, and is used to analy
 ### License
 
 This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details.
+
+[cohesionfirst]: https://www.cohesionfirst.com/
+[cohesionfirst_badge]: https://img.shields.io/badge/CohesionFirst%E2%84%A2--blue.svg
+[mvn-plugin]: https://img.shields.io/badge/mvn-plugin-lightgrey.svg
