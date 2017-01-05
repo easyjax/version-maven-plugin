@@ -112,9 +112,9 @@ public final class VersionMojo extends AdvancedMojo {
   private void executeUpdate(final Set<POMFile> updates) throws IOException, MojoFailureException {
     // Ensure maven is being run as: "mvn validate"
     final List<String> goals = session.getRequest().getGoals();
-    final LifecyclePhase[] phases = Enums.valueOf(LifecyclePhase.class, Arrays.<String>filter(new Arrays.Filter<String>() {
+    final LifecyclePhase[] phases = Enums.valueOf(LifecyclePhase.class, Arrays.<String>transform(new Arrays.Transformer<String>() {
       @Override
-      public String filter(final String value) {
+      public String transform(final String value) {
         return value.toUpperCase();
       }
     }, goals.toArray(new String[goals.size()])));
