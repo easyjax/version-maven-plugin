@@ -21,8 +21,10 @@ import java.io.IOException;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.function.UnaryOperator;
 
 import org.apache.maven.execution.MavenSession;
+import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
 import org.apache.maven.plugins.annotations.Component;
@@ -36,11 +38,10 @@ import org.eclipse.jgit.api.errors.GitAPIException;
 import org.safris.commons.lang.Arrays;
 import org.safris.commons.lang.Enums;
 import org.safris.commons.lang.Paths;
-import org.safris.maven.common.AdvancedMojo;
 
 @Mojo(name = "update", defaultPhase = LifecyclePhase.VALIDATE)
 @Execute(goal = "update")
-public final class VersionMojo extends AdvancedMojo {
+public final class VersionMojo extends AbstractMojo {
   @Parameter(property = "incrementPart", required = true)
   private Version.Part incrementPart;
 
@@ -112,9 +113,9 @@ public final class VersionMojo extends AdvancedMojo {
   private void executeUpdate(final Set<POMFile> updates) throws IOException, MojoFailureException {
     // Ensure maven is being run as: "mvn validate"
     final List<String> goals = session.getRequest().getGoals();
-    final LifecyclePhase[] phases = Enums.valueOf(LifecyclePhase.class, Arrays.<String>transform(new Arrays.Transformer<String>() {
+    final LifecyclePhase[] phases = Enums.valueOf(LifecyclePhase.class, Arrays.<String>replaceAll(new UnaryOperator<String>() {
       @Override
-      public String transform(final String value) {
+      public String apply(final String value) {
         return value.toUpperCase();
       }
     }, goals.toArray(new String[goals.size()])));

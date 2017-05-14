@@ -25,9 +25,11 @@ import java.util.Map;
 
 import org.safris.commons.io.Files;
 import org.safris.commons.lang.Strings;
-import org.safris.maven.common.Log;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Transaction {
+  private static final Logger logger = LoggerFactory.getLogger(Transaction.class);
   private static final File tempDir = new File(new File(System.getProperty("java.io.tmpdir")), Transaction.class.getPackage().getName());
 
   static {
@@ -59,7 +61,7 @@ public class Transaction {
       Files.deleteAll(tempDir.toPath());
     }
     catch (final IOException e) {
-      Log.warn("Failed to delete temp dir: " + tempDir.getAbsolutePath());
+      logger.warn("Failed to delete temp dir: " + tempDir.getAbsolutePath());
     }
   }
 }
