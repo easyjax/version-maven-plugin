@@ -54,7 +54,7 @@ public class Transaction {
         java.nio.file.Files.move(entry.getValue().toPath(), entry.getKey().toPath(), StandardCopyOption.ATOMIC_MOVE);
     }
     catch (final IOException e) {
-      throw new Error("Error encountered mid-commit", e);
+      throw new IllegalStateException("Error encountered mid-commit", e);
     }
 
     try {
