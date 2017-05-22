@@ -21,7 +21,7 @@ The `version:update` goal is bound to the `validate` phase, and is used to analy
 
 ```xml
 <plugin>
-  <groupId>org.safris.maven.plugin</groupId>
+  <groupId>org.lib4jx.maven.plugin</groupId>
   <artifactId>version-maven-plugin</artifactId>
   <version>0.1.1</version>
   <configuration>

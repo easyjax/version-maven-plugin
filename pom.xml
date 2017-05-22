@@ -1,5 +1,5 @@
 <!--
-  Copyright (c) 2012 Seva Safris
+  Copyright (c) 2012 lib4j
   
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -20,11 +20,11 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.safris.maven</groupId>
+    <groupId>org.lib4jx.maven</groupId>
     <artifactId>plugin</artifactId>
     <version>1.8.0</version>
   </parent>
-  <groupId>org.safris.maven.plugin</groupId>
+  <groupId>org.lib4jx.maven.plugin</groupId>
   <artifactId>version-maven-plugin</artifactId>
   <version>0.1.1</version>
   <name>${project.groupId}:${project.artifactId}</name>
@@ -63,8 +63,8 @@
   </build>
   <dependencies>
     <dependency>
-      <groupId>org.safris</groupId>
-      <artifactId>safris-io</artifactId>
+      <groupId>org.lib4j</groupId>
+      <artifactId>lib4j-io</artifactId>
     </dependency>
     <dependency>
       <groupId>org.apache.maven</groupId>
