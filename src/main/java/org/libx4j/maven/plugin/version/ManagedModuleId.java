@@ -14,34 +14,21 @@
  * program. If not, see <http://opensource.org/licenses/MIT/>.
  */
 
-package org.safris.maven.plugin.version;
+package org.libx4j.maven.plugin.version;
 
-public class ManagedPOMFile extends ManagedReference {
-  private final POMFile pomFile;
+public class ManagedModuleId extends ManagedReference {
+  private final ModuleId moduleId;
 
-  public ManagedPOMFile(final POMFile manager, final DependencyType dependencyType, final POMFile pomFile) {
+  public ManagedModuleId(final String groupId, final String artifactId, final Version version, final POMFile manager, final DependencyType dependencyType) {
     super(manager, dependencyType);
-    this.pomFile = pomFile;
+    this.moduleId = new ModuleId(groupId, artifactId, version);
   }
 
-  public POMFile pomFile() {
-    return pomFile;
+  public ManagedModuleId(final ModuleId moduleId) {
+    this(moduleId.groupId(), moduleId.artifactId(), moduleId.version(), null, null);
   }
 
-  @Override
-  public boolean equals(final Object obj) {
-    if (this == obj)
-      return true;
-
-    if (!(obj instanceof ManagedPOMFile) || !super.equals(obj))
-      return false;
-
-    final ManagedPOMFile that = (ManagedPOMFile)obj;
-    return pomFile != null ? pomFile.equals(that.pomFile) : that.pomFile == null;
-  }
-
-  @Override
-  public int hashCode() {
-    return super.hashCode() * (pomFile != null ? pomFile.hashCode() : -5);
+  public ModuleId moduleId() {
+    return moduleId;
   }
 }

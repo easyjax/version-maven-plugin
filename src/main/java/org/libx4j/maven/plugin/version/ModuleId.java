@@ -14,7 +14,7 @@
  * program. If not, see <http://opensource.org/licenses/MIT/>.
  */
 
-package org.safris.maven.plugin.version;
+package org.libx4j.maven.plugin.version;
 
 public class ModuleId {
   protected static boolean equal(final ModuleId a, final ModuleId b) {
