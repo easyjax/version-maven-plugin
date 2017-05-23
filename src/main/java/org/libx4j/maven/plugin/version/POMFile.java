@@ -29,8 +29,8 @@ import java.util.Map;
 import java.util.Set;
 
 import org.apache.maven.plugin.MojoFailureException;
-import org.safris.commons.lang.Pair;
-import org.safris.commons.lang.Paths;
+import org.lib4j.lang.Pair;
+import org.lib4j.lang.Paths;
 
 public class POMFile extends ModuleId {
   private static final Map<POMFile,POMFile> pomFiles = new HashMap<POMFile,POMFile>();
