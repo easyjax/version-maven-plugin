@@ -20,6 +20,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.nio.file.Files;
+import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -29,7 +30,6 @@ import java.util.Map;
 import java.util.Set;
 
 import org.apache.maven.plugin.MojoFailureException;
-import org.lib4j.lang.Pair;
 import org.lib4j.lang.Paths;
 
 public class POMFile extends ModuleId {
@@ -224,7 +224,7 @@ public class POMFile extends ModuleId {
   private final Map<ModuleId,POMFile> managedDependencies = new LinkedHashMap<ModuleId,POMFile>();;
   private final Set<ManagedPOMFile> plugins = new LinkedHashSet<ManagedPOMFile>();;
   private final Map<ModuleId,POMFile> managedPlugins = new LinkedHashMap<ModuleId,POMFile>();;
-  private final Set<Pair<ManagedPOMFile,DependencyType>> allDependencies = new LinkedHashSet<Pair<ManagedPOMFile,DependencyType>>();;
+  private final Set<AbstractMap.SimpleEntry<ManagedPOMFile,DependencyType>> allDependencies = new LinkedHashSet<AbstractMap.SimpleEntry<ManagedPOMFile,DependencyType>>();;
 
   public Set<ManagedPOMFile> dependents() {
     return dependents;
@@ -263,21 +263,21 @@ public class POMFile extends ModuleId {
 
       for (final ManagedPOMFile managedDependency : parseModuleIds(DependencyType.MANAGED_DEPENDENCY)) {
         managedDependencies.put(new ModuleId(managedDependency.pomFile().groupId(), managedDependency.pomFile().artifactId(), null), managedDependency.pomFile());
-        allDependencies.add(new Pair<ManagedPOMFile,DependencyType>(managedDependency, DependencyType.MANAGED_DEPENDENCY));
+        allDependencies.add(new AbstractMap.SimpleEntry<ManagedPOMFile,DependencyType>(managedDependency, DependencyType.MANAGED_DEPENDENCY));
       }
 
       dependencies.addAll(parseModuleIds(DependencyType.DEPENDENCY));
       for (final ManagedPOMFile dependency : dependencies)
-        allDependencies.add(new Pair<ManagedPOMFile,DependencyType>(dependency, DependencyType.DEPENDENCY));
+        allDependencies.add(new AbstractMap.SimpleEntry<ManagedPOMFile,DependencyType>(dependency, DependencyType.DEPENDENCY));
 
       for (final ManagedPOMFile managedPlugin : parseModuleIds(DependencyType.MANAGED_PLUGIN)) {
         managedPlugins.put(new ModuleId(managedPlugin.pomFile().groupId(), managedPlugin.pomFile().artifactId(), null), managedPlugin.pomFile());
-        allDependencies.add(new Pair<ManagedPOMFile,DependencyType>(managedPlugin, DependencyType.MANAGED_PLUGIN));
+        allDependencies.add(new AbstractMap.SimpleEntry<ManagedPOMFile,DependencyType>(managedPlugin, DependencyType.MANAGED_PLUGIN));
       }
 
       plugins.addAll(parseModuleIds(DependencyType.PLUGIN));
       for (final ManagedPOMFile plugin : plugins)
-        allDependencies.add(new Pair<ManagedPOMFile,DependencyType>(plugin, DependencyType.PLUGIN));
+        allDependencies.add(new AbstractMap.SimpleEntry<ManagedPOMFile,DependencyType>(plugin, DependencyType.PLUGIN));
 
       relationsResolved = true;
     }
