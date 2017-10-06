@@ -77,6 +77,7 @@
     <dependency>
       <groupId>org.eclipse.jgit</groupId>
       <artifactId>org.eclipse.jgit</artifactId>
+      <version>RELEASE</version>
     </dependency>
   </dependencies>
   <repositories>
