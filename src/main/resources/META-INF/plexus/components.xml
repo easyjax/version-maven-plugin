@@ -23,7 +23,7 @@
       <configuration>
         <id>version</id>
         <default-phases>
-          <validate>org.libx4j.maven.plugin:version-maven-plugin:update</validate>
+          <validate>org.lib4j.maven.plugin:version-maven-plugin:update</validate>
         </default-phases>
       </configuration>
     </component>
@@ -37,7 +37,7 @@
           <phase>version</phase>
         </phases>
         <default-phases>
-          <version>org.libx4j.maven.plugin:version-maven-plugin:update</version>
+          <version>org.lib4j.maven.plugin:version-maven-plugin:update</version>
         </default-phases>
       </configuration>
     </component>
