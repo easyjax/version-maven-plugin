@@ -39,16 +39,16 @@ import org.lib4j.lang.Arrays;
 import org.lib4j.lang.Enums;
 import org.lib4j.lang.Paths;
 
-@Mojo(name = "update", defaultPhase = LifecyclePhase.VALIDATE)
-@Execute(goal = "update")
+@Mojo(name="update", defaultPhase=LifecyclePhase.VALIDATE)
+@Execute(goal="update")
 public final class VersionMojo extends AbstractMojo {
-  @Parameter(property = "incrementPart", required = true)
+  @Parameter(property="incrementPart", required=true)
   private Version.Part incrementPart;
 
-  @Parameter(property = "incrementSnapshot", defaultValue = "false")
+  @Parameter(property="incrementSnapshot", defaultValue="false")
   private Boolean incrementSnapshot;
 
-  @Parameter(defaultValue = "${project}", required = true, readonly = true)
+  @Parameter(defaultValue="${project}", required=true, readonly=true)
   private MavenProject project;
 
   @Component
