@@ -36,7 +36,7 @@ public class Version implements Comparable<Version> {
 
   public Version(final String version) {
     if (version == null)
-      throw new NullPointerException("version == null");
+      throw new IllegalArgumentException("version == null");
 
     final Matcher matcher = pattern.matcher(version);
     matcher.find();
@@ -80,7 +80,7 @@ public class Version implements Comparable<Version> {
 
   public Version increment(final Part part) throws MojoFailureException {
     if (part == null)
-      throw new NullPointerException("part == null");
+      throw new IllegalArgumentException("part == null");
 
     if (part == Part.MAJOR) {
       if (major() == null)
