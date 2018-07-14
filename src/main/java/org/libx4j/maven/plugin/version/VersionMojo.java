@@ -70,7 +70,7 @@ public final class VersionMojo extends AbstractMojo {
         getLog().info("Detected " + changedFilePaths.size() + " changed files staged to commit. Will check POM version...");
 
         pomFile.checkIncreaseVersion(incrementPart);
-        final Set<POMFile> updates = new HashSet<POMFile>();
+        final Set<POMFile> updates = new HashSet<>();
         for (final POMFile update : POMFile.getPendingUpdates()) {
           final String previousText = originals.fetchBlob(Paths.canonicalize(pomFile.file().getAbsolutePath().substring(repoDir.getAbsolutePath().length() + 1)));
           final Version previousVersion = POMFile.parse(null, previousText).version();

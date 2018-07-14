@@ -30,7 +30,7 @@ public class VersionUtil {
     int i = 0;
     int d = -1;
     boolean inComment = false;
-    final List<int[]> results = new ArrayList<int[]>();
+    final List<int[]> results = new ArrayList<>();
     for (final String xpath : xpaths) {
       matcher.reset();
       final String[] parts = xpath.split("\\/");

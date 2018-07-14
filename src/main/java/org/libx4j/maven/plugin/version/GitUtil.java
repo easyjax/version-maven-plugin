@@ -38,7 +38,7 @@ public class GitUtil {
 
   public static Set<String> lookupChangedFiles(final POMFile pomFile, final Git git) throws GitAPIException, IOException, MojoFailureException {
     final Status status = git.status().call();
-    final Set<String> changes = new HashSet<String>();
+    final Set<String> changes = new HashSet<>();
     changes.addAll(status.getChanged());
     changes.addAll(status.getAdded());
     changes.addAll(status.getRemoved());

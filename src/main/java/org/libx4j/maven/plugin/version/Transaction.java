@@ -36,7 +36,7 @@ public class Transaction {
     tempDir.mkdir();
   }
 
-  private final Map<File,File> realToTemp = new HashMap<File,File>();
+  private final Map<File,File> realToTemp = new HashMap<>();
 
   public void addFile(final File file, final byte[] contents) throws IOException {
     final File tempFile = new File(tempDir, file.getName() + "-" + Strings.getRandomAlphaNumericString(6));
