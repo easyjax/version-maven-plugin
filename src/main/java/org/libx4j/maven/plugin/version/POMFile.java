@@ -30,7 +30,7 @@ import java.util.Map;
 import java.util.Set;
 
 import org.apache.maven.plugin.MojoFailureException;
-import org.lib4j.lang.Paths;
+import org.lib4j.util.Paths;
 
 public class POMFile extends ModuleId {
   private static final Map<POMFile,POMFile> pomFiles = new HashMap<>();
