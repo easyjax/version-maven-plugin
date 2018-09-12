@@ -24,7 +24,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.lib4j.io.Files;
-import org.lib4j.util.Strings;
+import org.fastjax.util.Strings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
