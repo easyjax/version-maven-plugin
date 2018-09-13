@@ -14,7 +14,7 @@
  * program. If not, see <http://opensource.org/licenses/MIT/>.
  */
 
-package org.libx4j.maven.plugin.version;
+package org.easyjax.maven.plugin.version;
 
 public enum DependencyType {
   DEPENDENCY("project/dependencies/dependency", "project/profiles/profile/dependencies/dependency"),
