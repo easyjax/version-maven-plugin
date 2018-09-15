@@ -1,6 +1,6 @@
-<img src="https://www.cohesionfirst.org/logo.png" align="right">
+<img src="https://images.cooltext.com/5195724.png" align="right">
 
-## version-maven-plugin<br>![mvn-plugin][mvn-plugin] <a href="https://www.cohesionfirst.org/"><img src="https://img.shields.io/badge/CohesionFirst%E2%84%A2--blue.svg"></a>
+## version-maven-plugin<br>![mvn-plugin][mvn-plugin] <a href="https://www.easyjax.org/"><img src="https://img.shields.io/badge/EasyJAX--blue.svg"></a>
 > Maven Plugin for POM version management goals
 
 ### Introduction
@@ -45,5 +45,7 @@ The `version:update` goal is bound to the `validate` phase, and is used to analy
 ### License
 
 This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details.
+
+<a href="http://cooltext.com" target="_top"><img src="https://cooltext.com/images/ct_pixel.gif" width="80" height="15" alt="Cool Text: Logo and Graphics Generator" border="0" /></a>
 
 [mvn-plugin]: https://img.shields.io/badge/mvn-plugin-lightgrey.svg
