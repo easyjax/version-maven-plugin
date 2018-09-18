@@ -17,7 +17,7 @@
 package org.easyjax.maven.plugin.version;
 
 import org.apache.maven.plugin.MojoFailureException;
-import org.easyjax.maven.plugin.version.Version;
+import org.easyjax.version.Version;
 import org.junit.Assert;
 import org.junit.Test;
 

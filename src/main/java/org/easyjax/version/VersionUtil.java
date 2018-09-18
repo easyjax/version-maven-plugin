@@ -14,7 +14,7 @@
  * program. If not, see <http://opensource.org/licenses/MIT/>.
  */
 
-package org.easyjax.maven.plugin.version;
+package org.easyjax.version;
 
 import java.util.ArrayList;
 import java.util.List;

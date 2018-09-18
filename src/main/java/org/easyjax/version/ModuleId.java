@@ -14,7 +14,7 @@
  * program. If not, see <http://opensource.org/licenses/MIT/>.
  */
 
-package org.easyjax.maven.plugin.version;
+package org.easyjax.version;
 
 public class ModuleId {
   protected static boolean equal(final ModuleId a, final ModuleId b) {
