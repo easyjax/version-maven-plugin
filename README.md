@@ -21,7 +21,7 @@ The `version:update` goal is bound to the `validate` phase, and is used to analy
 
 ```xml
 <plugin>
-  <groupId>org.easyjax.maven.plugin</groupId>
+  <groupId>org.easyjax.version</groupId>
   <artifactId>version-maven-plugin</artifactId>
   <version>0.1.3-SNAPSHOT</version>
   <configuration>
