@@ -35,7 +35,7 @@ import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.project.MavenProject;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.errors.GitAPIException;
-import org.fastjax.util.Arrays;
+import org.fastjax.util.FastArrays;
 import org.fastjax.util.Enums;
 import org.fastjax.util.Paths;
 
@@ -113,7 +113,7 @@ public final class VersionMojo extends AbstractMojo {
   private void executeUpdate(final Set<POMFile> updates) throws IOException, MojoFailureException {
     // Ensure maven is being run as: "mvn validate"
     final List<String> goals = session.getRequest().getGoals();
-    final LifecyclePhase[] phases = Enums.valueOf(LifecyclePhase.class, Arrays.<String>replaceAll(new UnaryOperator<String>() {
+    final LifecyclePhase[] phases = Enums.valueOf(LifecyclePhase.class, FastArrays.<String>replaceAll(new UnaryOperator<String>() {
       @Override
       public String apply(final String value) {
         return value.toUpperCase();

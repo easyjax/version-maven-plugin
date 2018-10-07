@@ -23,7 +23,7 @@ import java.nio.file.StandardCopyOption;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.fastjax.io.FileUtils;
+import org.fastjax.io.FastFiles;
 import org.fastjax.util.Strings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -58,7 +58,7 @@ public class Transaction {
     }
 
     try {
-      FileUtils.deleteAll(tempDir.toPath());
+      FastFiles.deleteAll(tempDir.toPath());
     }
     catch (final IOException e) {
       logger.warn("Failed to delete temp dir: " + tempDir.getAbsolutePath());
