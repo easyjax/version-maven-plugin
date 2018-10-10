@@ -106,7 +106,7 @@ public final class VersionMojo extends AbstractMojo {
       }
     }
     catch (final GitAPIException | IOException e) {
-      throw new MojoExecutionException(e.getMessage(), e);
+      throw new MojoExecutionException(e.getClass().getSimpleName() + ": " + e.getMessage(), e);
     }
   }
 
