@@ -16,25 +16,26 @@
 
 package org.easyjax.maven.plugin.version;
 
+import static org.junit.Assert.*;
+
 import org.apache.maven.plugin.MojoFailureException;
 import org.easyjax.version.Version;
-import org.junit.Assert;
 import org.junit.Test;
 
 public class VersionTest {
   @Test
   public void testVersion() throws MojoFailureException {
-    Assert.assertEquals(0, new Version("1.7.1").compareTo(new Version("1.7.1")));
+    assertEquals(0, new Version("1.7.1").compareTo(new Version("1.7.1")));
 
-    Assert.assertEquals(new Version("0.1.1-SNAPSHOT"), new Version("0.1.0-SNAPSHOT").increment(Version.Part.PATCH));
-    Assert.assertEquals(new Version("0.2.0-SNAPSHOT"), new Version("0.1.0-SNAPSHOT").increment(Version.Part.MINOR));
-    Assert.assertEquals(new Version("1.1.0-SNAPSHOT"), new Version("0.1.0-SNAPSHOT").increment(Version.Part.MAJOR));
+    assertEquals(new Version("0.1.1-SNAPSHOT"), new Version("0.1.0-SNAPSHOT").increment(Version.Part.PATCH));
+    assertEquals(new Version("0.2.0-SNAPSHOT"), new Version("0.1.0-SNAPSHOT").increment(Version.Part.MINOR));
+    assertEquals(new Version("1.1.0-SNAPSHOT"), new Version("0.1.0-SNAPSHOT").increment(Version.Part.MAJOR));
 
-    Assert.assertEquals(0, new Version("1.1.0-SNAPSHOT").compareTo(new Version("1.1.0-SNAPSHOT")));
-    Assert.assertEquals(-1, new Version("1.1.0-SNAPSHOT").compareTo(new Version("1.1.1-SNAPSHOT")));
-    Assert.assertEquals(-1, new Version("1.1.0-SNAPSHOT").compareTo(new Version("1.2-SNAPSHOT")));
-    Assert.assertEquals(0, new Version("1.1.1-SNAPSHOT").compareTo(new Version("1.1.1-SNAPSHOT")));
+    assertEquals(0, new Version("1.1.0-SNAPSHOT").compareTo(new Version("1.1.0-SNAPSHOT")));
+    assertEquals(-1, new Version("1.1.0-SNAPSHOT").compareTo(new Version("1.1.1-SNAPSHOT")));
+    assertEquals(-1, new Version("1.1.0-SNAPSHOT").compareTo(new Version("1.2-SNAPSHOT")));
+    assertEquals(0, new Version("1.1.1-SNAPSHOT").compareTo(new Version("1.1.1-SNAPSHOT")));
 
-    Assert.assertEquals(1, new Version("RELEASE").compareTo(new Version("1.1.0-SNAPSHOT")));
+    assertEquals(1, new Version("RELEASE").compareTo(new Version("1.1.0-SNAPSHOT")));
   }
 }
