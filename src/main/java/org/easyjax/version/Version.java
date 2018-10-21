@@ -84,21 +84,21 @@ public class Version implements Comparable<Version> {
 
     if (part == Part.MAJOR) {
       if (major() == null)
-        throw new MojoFailureException("Version " + this + " does not have a major version component to increment.");
+        throw new MojoFailureException("Version " + this + " does not have a major version component to increment");
 
       return new Version(prefix, major + 1, minor, patch, suffix);
     }
 
     if (part == Part.MINOR) {
       if (minor == null)
-        throw new MojoFailureException("Version " + this + " does not have a minor version component to increment.");
+        throw new MojoFailureException("Version " + this + " does not have a minor version component to increment");
 
       return new Version(prefix, major, minor + 1, patch, suffix);
     }
 
     if (part == Part.PATCH) {
       if (patch == null)
-        throw new MojoFailureException("Version " + this + " does not have a patch version component to increment.");
+        throw new MojoFailureException("Version " + this + " does not have a patch version component to increment");
 
       return new Version(prefix, major, minor, patch + 1, suffix);
     }

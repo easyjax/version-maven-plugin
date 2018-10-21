@@ -324,7 +324,12 @@ public class POMFile extends ModuleId {
       return false;
 
     final POMFile that = (POMFile)obj;
-    return file != null ? Paths.equal(file, that.file) : that.file == null;
+    try {
+      return file != null ? file.getCanonicalFile().equals(that.file.getCanonicalFile()) : that.file == null;
+    }
+    catch (final IOException e) {
+      return false;
+    }
   }
 
   @Override
