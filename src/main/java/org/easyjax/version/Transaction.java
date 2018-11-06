@@ -39,7 +39,7 @@ public class Transaction {
   private final Map<File,File> realToTemp = new HashMap<>();
 
   public void addFile(final File file, final byte[] contents) throws IOException {
-    final File tempFile = new File(tempDir, file.getName() + "-" + Strings.getRandomAlphaNumericString(6));
+    final File tempFile = new File(tempDir, file.getName() + "-" + Strings.getRandomAlphaNumeric(6));
     try (final RandomAccessFile raf = new RandomAccessFile(tempFile, "rw")) {
       raf.write(contents);
       raf.setLength(raf.getFilePointer());
