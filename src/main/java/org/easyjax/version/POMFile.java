@@ -219,11 +219,11 @@ public class POMFile extends ModuleId {
 
   private volatile Boolean relationsResolved = false;
   private final Set<ManagedPOMFile> dependents = new LinkedHashSet<>();
-  private final Set<ManagedPOMFile> dependencies = new LinkedHashSet<>();;
-  private final Map<ModuleId,POMFile> managedDependencies = new LinkedHashMap<>();;
-  private final Set<ManagedPOMFile> plugins = new LinkedHashSet<>();;
-  private final Map<ModuleId,POMFile> managedPlugins = new LinkedHashMap<>();;
-  private final Set<AbstractMap.SimpleEntry<ManagedPOMFile,DependencyType>> allDependencies = new LinkedHashSet<>();;
+  private final Set<ManagedPOMFile> dependencies = new LinkedHashSet<>();
+  private final Map<ModuleId,POMFile> managedDependencies = new LinkedHashMap<>();
+  private final Set<ManagedPOMFile> plugins = new LinkedHashSet<>();
+  private final Map<ModuleId,POMFile> managedPlugins = new LinkedHashMap<>();
+  private final Set<AbstractMap.SimpleEntry<ManagedPOMFile,DependencyType>> allDependencies = new LinkedHashSet<>();
 
   public Set<ManagedPOMFile> dependents() {
     return dependents;

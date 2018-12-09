@@ -22,7 +22,7 @@ import java.util.regex.Pattern;
 import org.apache.maven.plugin.MojoFailureException;
 
 public class Version implements Comparable<Version> {
-  public static enum Part {
+  public enum Part {
     MAJOR, MINOR, PATCH
   }
 
@@ -119,8 +119,7 @@ public class Version implements Comparable<Version> {
     if (minorComp != 0)
       return minorComp;
 
-    final int patchComp = patch == null ? (o.patch == null ? 0 : 1) : (patch < o.patch ? -1 : patch == o.patch ? 0 : 1);
-    return patchComp;
+    return patch == null ? (o.patch == null ? 0 : 1) : (patch < o.patch ? -1 : patch == o.patch ? 0 : 1);
   }
 
   @Override
