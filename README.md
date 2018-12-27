@@ -1,7 +1,6 @@
-<img src="https://images.cooltext.com/5195724.png" align="right">
+# EasyJAX Version Maven Plugin
 
-## version-maven-plugin<br>![mvn-plugin][mvn-plugin] <a href="https://www.easyjax.org/"><img src="https://img.shields.io/badge/EasyJAX--blue.svg"></a>
-> Maven Plugin for POM version management goals
+**Maven Plugin for POM version management goals**
 
 ### Introduction
 
@@ -41,6 +40,16 @@ The `version:update` goal is bound to the `validate` phase, and is used to analy
 ### Known Issues
 
 **THIS PLUGIN IS IN ALPHA**
+
+### JavaDocs
+
+JavaDocs are available [here](https://www.easyjax.org/version-maven-archetype/javadocs/).
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
 
 ### License
 
