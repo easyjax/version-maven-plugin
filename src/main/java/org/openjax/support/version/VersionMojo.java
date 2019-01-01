@@ -1,4 +1,4 @@
-/* Copyright (c) 2015 EasyJAX
+/* Copyright (c) 2015 OpenJAX
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -14,7 +14,7 @@
  * program. If not, see <http://opensource.org/licenses/MIT/>.
  */
 
-package org.easyjax.version;
+package org.openjax.support.version;
 
 import java.io.File;
 import java.io.IOException;
@@ -35,9 +35,9 @@ import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.project.MavenProject;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.errors.GitAPIException;
-import org.fastjax.util.FastArrays;
-import org.fastjax.util.Enums;
-import org.fastjax.util.Paths;
+import org.openjax.classic.util.Enums;
+import org.openjax.classic.util.FastArrays;
+import org.openjax.classic.util.Paths;
 
 @Mojo(name="update", defaultPhase=LifecyclePhase.VALIDATE)
 @Execute(goal="update")

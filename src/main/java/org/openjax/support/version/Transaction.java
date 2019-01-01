@@ -1,4 +1,4 @@
-/* Copyright (c) 2016 EasyJAX
+/* Copyright (c) 2016 OpenJAX
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -14,7 +14,7 @@
  * program. If not, see <http://opensource.org/licenses/MIT/>.
  */
 
-package org.easyjax.version;
+package org.openjax.support.version;
 
 import java.io.File;
 import java.io.IOException;
@@ -23,8 +23,8 @@ import java.nio.file.StandardCopyOption;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.fastjax.io.FastFiles;
-import org.fastjax.util.Strings;
+import org.openjax.classic.io.FastFiles;
+import org.openjax.classic.util.Strings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

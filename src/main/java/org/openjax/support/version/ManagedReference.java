@@ -1,4 +1,4 @@
-/* Copyright (c) 2016 EasyJAX
+/* Copyright (c) 2016 OpenJAX
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -14,18 +14,23 @@
  * program. If not, see <http://opensource.org/licenses/MIT/>.
  */
 
-package org.easyjax.version;
+package org.openjax.support.version;
 
-public class ManagedPOMFile extends ManagedReference {
-  private final POMFile pomFile;
+public abstract class ManagedReference {
+  private final POMFile manager;
+  private final DependencyType dependencyType;
 
-  public ManagedPOMFile(final POMFile manager, final DependencyType dependencyType, final POMFile pomFile) {
-    super(manager, dependencyType);
-    this.pomFile = pomFile;
+  public ManagedReference(final POMFile manager, final DependencyType dependencyType) {
+    this.manager = manager;
+    this.dependencyType = dependencyType;
   }
 
-  public POMFile pomFile() {
-    return pomFile;
+  public POMFile manager() {
+    return manager;
+  }
+
+  public DependencyType dependencyType() {
+    return dependencyType;
   }
 
   @Override
@@ -33,15 +38,15 @@ public class ManagedPOMFile extends ManagedReference {
     if (this == obj)
       return true;
 
-    if (!(obj instanceof ManagedPOMFile) || !super.equals(obj))
+    if (!(obj instanceof ManagedReference))
       return false;
 
-    final ManagedPOMFile that = (ManagedPOMFile)obj;
-    return pomFile != null ? pomFile.equals(that.pomFile) : that.pomFile == null;
+    final ManagedReference that = (ManagedReference)obj;
+    return (manager != null ? manager.equals(that.manager) : that.manager == null) && (dependencyType == that.dependencyType);
   }
 
   @Override
   public int hashCode() {
-    return super.hashCode() * (pomFile != null ? pomFile.hashCode() : -5);
+    return (manager != null ? manager.hashCode() : -5) ^ (dependencyType != null ? dependencyType.ordinal() : -7);
   }
 }

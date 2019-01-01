@@ -1,4 +1,4 @@
-# EasyJAX Version Maven Plugin
+# OpenJAX Support Version Maven Plugin
 
 **Maven Plugin for POM version management goals**
 
@@ -20,7 +20,7 @@ The `version:update` goal is bound to the `validate` phase, and is used to analy
 
 ```xml
 <plugin>
-  <groupId>org.easyjax.version</groupId>
+  <groupId>org.openjax.support</groupId>
   <artifactId>version-maven-plugin</artifactId>
   <version>0.1.3-SNAPSHOT</version>
   <configuration>
@@ -43,7 +43,7 @@ The `version:update` goal is bound to the `validate` phase, and is used to analy
 
 ### JavaDocs
 
-JavaDocs are available [here](https://www.easyjax.org/version-maven-archetype/javadocs/).
+JavaDocs are available [here](https://support.openjax.org/version-maven-archetype/apidocs/).
 
 ## Contributing
 

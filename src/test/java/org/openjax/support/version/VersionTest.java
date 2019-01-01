@@ -1,4 +1,4 @@
-/* Copyright (c) 2016 EasyJAX
+/* Copyright (c) 2016 OpenJAX
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -14,12 +14,11 @@
  * program. If not, see <http://opensource.org/licenses/MIT/>.
  */
 
-package org.easyjax.maven.plugin.version;
+package org.openjax.support.version;
 
 import static org.junit.Assert.*;
 
 import org.apache.maven.plugin.MojoFailureException;
-import org.easyjax.version.Version;
 import org.junit.Test;
 
 public class VersionTest {
