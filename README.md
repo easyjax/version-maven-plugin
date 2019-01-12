@@ -1,6 +1,8 @@
 # OpenJAX Support Version Maven Plugin
 
-**Maven Plugin for POM version management goals**
+> Maven Plugin for POM version management goals
+
+[![Build Status](https://travis-ci.org/openjax/version-maven-plugin.png)](https://travis-ci.org/openjax/version-maven-plugin)
 
 ### Introduction
 
