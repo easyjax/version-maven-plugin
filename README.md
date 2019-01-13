@@ -3,6 +3,7 @@
 > Maven Plugin for POM version management goals
 
 [![Build Status](https://travis-ci.org/openjax/version-maven-plugin.png)](https://travis-ci.org/openjax/version-maven-plugin)
+[![Coverage Status](https://coveralls.io/repos/github/openjax/version-maven-plugin/badge.svg)](https://coveralls.io/github/openjax/version-maven-plugin)
 
 ### Introduction
 
