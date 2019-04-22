@@ -77,7 +77,7 @@
     </dependency>
     <dependency>
       <groupId>org.openjax.standard</groupId>
-      <artifactId>standard-io</artifactId>
+      <artifactId>io</artifactId>
       <version>0.7.5-SNAPSHOT</version>
     </dependency>
   </dependencies>
