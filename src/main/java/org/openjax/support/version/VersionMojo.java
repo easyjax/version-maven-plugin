@@ -35,9 +35,9 @@ import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.project.MavenProject;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.errors.GitAPIException;
-import org.openjax.standard.util.Enums;
-import org.openjax.standard.util.FastArrays;
-import org.openjax.standard.util.Paths;
+import org.openjax.ext.util.Enums;
+import org.openjax.ext.util.FastArrays;
+import org.openjax.ext.util.Paths;
 
 @Mojo(name="update", defaultPhase=LifecyclePhase.VALIDATE)
 @Execute(goal="update")

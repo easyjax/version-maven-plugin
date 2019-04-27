@@ -54,7 +54,7 @@
         </executions>
       </plugin>
       <plugin>
-        <groupId>org.openjax.standard.xml</groupId>
+        <groupId>org.openjax.ext.xml</groupId>
         <artifactId>xml-maven-plugin</artifactId>
       </plugin>
     </plugins>
@@ -76,7 +76,7 @@
       <version>4.11.0.201803080745-r</version>
     </dependency>
     <dependency>
-      <groupId>org.openjax.standard</groupId>
+      <groupId>org.openjax.ext</groupId>
       <artifactId>io</artifactId>
       <version>0.7.5-SNAPSHOT</version>
     </dependency>

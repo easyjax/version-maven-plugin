@@ -23,8 +23,8 @@ import java.nio.file.StandardCopyOption;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.openjax.standard.io.FastFiles;
-import org.openjax.standard.util.Strings;
+import org.openjax.ext.io.FastFiles;
+import org.openjax.ext.util.Strings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
