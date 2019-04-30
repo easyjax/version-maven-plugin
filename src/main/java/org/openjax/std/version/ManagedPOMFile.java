@@ -14,7 +14,7 @@
  * program. If not, see <http://opensource.org/licenses/MIT/>.
  */
 
-package org.openjax.support.version;
+package org.openjax.std.version;
 
 public class ManagedPOMFile extends ManagedReference {
   private final POMFile pomFile;

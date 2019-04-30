@@ -14,7 +14,7 @@
  * program. If not, see <http://opensource.org/licenses/MIT/>.
  */
 
-package org.openjax.support.version;
+package org.openjax.std.version;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

@@ -1,11 +1,11 @@
-# OpenJAX Support Version Maven Plugin
+# OpenJAX Std Version Maven Plugin
 
 > Maven Plugin for POM version management goals
 
 [![Build Status](https://travis-ci.org/openjax/version-maven-plugin.png)](https://travis-ci.org/openjax/version-maven-plugin)
 [![Coverage Status](https://coveralls.io/repos/github/openjax/version-maven-plugin/badge.svg)](https://coveralls.io/github/openjax/version-maven-plugin)
-[![Javadocs](https://www.javadoc.io/badge/org.openjax.support/version-maven-plugin.svg)](https://www.javadoc.io/doc/org.openjax.support/version-maven-plugin)
-[![Released Version](https://img.shields.io/maven-central/v/org.openjax.support/version-maven-plugin.svg)](https://mvnrepository.com/artifact/org.openjax.support/version-maven-plugin)
+[![Javadocs](https://www.javadoc.io/badge/org.openjax.std/version-maven-plugin.svg)](https://www.javadoc.io/doc/org.openjax.std/version-maven-plugin)
+[![Released Version](https://img.shields.io/maven-central/v/org.openjax.std/version-maven-plugin.svg)](https://mvnrepository.com/artifact/org.openjax.std/version-maven-plugin)
 
 ### Introduction
 
@@ -25,7 +25,7 @@ The `version:update` goal is bound to the `validate` phase, and is used to analy
 
 ```xml
 <plugin>
-  <groupId>org.openjax.support</groupId>
+  <groupId>org.openjax.std</groupId>
   <artifactId>version-maven-plugin</artifactId>
   <version>0.1.3-SNAPSHOT</version>
   <configuration>
